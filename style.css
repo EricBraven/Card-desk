@@ -32,6 +32,7 @@ body{
 .container .drawer{
     width:45%;
     border-radius:20px 0 0 20px;
+    animation: slideFromRight 5s linear 1;
 }
 
 .container .content{
@@ -48,12 +49,14 @@ body{
     margin:20px 10px 25px 0;
     color:var(--Very-Dark-Grayish-Blue);
     letter-spacing: .1rem;
+    animation: slideFromLeft 5s linear 1;
 }
 
 .container .content p{
     font-size:20px;
     color:var(--Desaturated-Dark-Blue);
     margin:0 10px 0 0;
+    animation: slideFromLeft 5s linear 1;
 }
 
 .container .content article{
@@ -67,6 +70,7 @@ body{
 .container .content article h4{
     color:var(--Very-Dark-Grayish-Blue);
     font-size:20px;
+    animation: slideFromLeft 5s linear 1;
 }
 .container .content article .avatar{
     width:10%;
@@ -120,6 +124,42 @@ body{
     transform: rotate(180deg);
 }
 
+@keyframes slideFromTop{
+    0%{
+        transform:translateY(-100%);
+    }
+    50%{
+        transform:translateY(10%);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideFromLeft{
+    0%{
+        transform:translateY(100%);
+    }
+    50%{
+        transform:translateY(10%);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideFromRight{
+    0%{
+        transform:translateX(-100%);
+    }
+    50%{
+        transform:translateX(10%);
+    }
+    100%{
+        transform:0;
+    }
+}
+
 .attribution{
     text-align: center;
 }
@@ -134,6 +174,7 @@ body{
     .container .drawer{
         width:100%;
         border-radius:20px 20px 0   0 ;
+        animation: slideFromTop 5s linear 1;
     }
 
     .container .content{
